@@ -9,7 +9,7 @@ const Modal = ({ notifContent, closeNotif }) => {
     })
 
   return <div className="modal-box">
-    <div className="modal-text">
+    <div className="notification">
         {notifContent}
     </div>
   </div> 

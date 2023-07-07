@@ -77,7 +77,7 @@ const App = () => {
         dispatch( { type: "CLOSE_NOTIFICATION" })
     }
 
-  return <section>
+  return <section className="form">
     {state.showNotification && <Modal notifContent={state.notificationContent} closeNotif={
         closeNotification
     } />}
@@ -88,7 +88,7 @@ const App = () => {
     <div>
         {
             state.movies.map((movie) => {
-                return <div key={movie.id}>
+                return <div key={movie.id} className="all-movies">
                     <p>{movie.name}</p>
                     <button type="button" onClick={ () => dispatch( {type: 
                     "REMOVE_MOVIE", payload: movie.id} ) }>Delete</button>
